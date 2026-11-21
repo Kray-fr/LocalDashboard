@@ -1,0 +1,16 @@
+{
+  "port": 8080,
+  "name": "",
+  "location": { "name": "Solre-le-Château", "latitude": 50.17, "longitude": 4.08 },
+  "feeds": [
+    { "name": "Le Monde", "url": "https://www.lemonde.fr/rss/une.xml" },
+    { "name": "France Info", "url": "https://www.francetvinfo.fr/titres.rss" }
+  ],
+  "shortcuts": [
+    { "name": "YouTube", "url": "https://www.youtube.com" },
+    { "name": "Gmail", "url": "https://mail.google.com" },
+    { "name": "GitHub", "url": "https://github.com" },
+    { "name": "Wikipédia", "url": "https://fr.wikipedia.org" },
+    { "name": "Claude", "url": "https://claude.ai" }
+  ]
+}

@@ -1,0 +1,38 @@
+DASHBOARD PC (Windows)
+
+1. Installe Python 3 (python.org) en cochant "Add python.exe to PATH".
+2. Double-clique sur installer.bat (installe psutil + lancement auto a l'ouverture de session).
+3. Double-clique sur lancer_silencieux.vbs pour demarrer maintenant.
+   (ou lancer.bat pour voir la console et ouvrir la page tout de suite)
+4. Firefox : Parametres > Accueil > "Page d'accueil et nouvelles fenetres"
+   > URL personnalisees > http://localhost:8080
+
+Personnalisation : edite config.json (prenom, ville/coordonnees meteo, flux RSS, raccourcis),
+puis relance le serveur (fermer pythonw.exe dans le Gestionnaire des taches, ou redemarrer).
+
+Desinstaller le lancement auto : supprime Dashboard-PC dans
+  Win+R > shell:startup
+
+Note : Windows n'expose pas les temperatures CPU ni les ventilateurs via Python.
+La carte graphique n'apparait que pour les cartes NVIDIA (nvidia-smi).
+
+COMPTES : bouton "Comptes" en haut a droite de la page (GitHub, Gmail, Google Agenda).
+Les identifiants sont dans accounts.json : ne le partage pas.
+
+Comptes disponibles : GitHub, mails (IMAP), agenda (lien iCal), Steam, YouTube (ID de chaines), GitLab.
+Les favoris (barre de droite) sont enregistres dans Firefox ; clic droit pour retirer.
+
+Mise a jour : au chargement de la page, toutes les 5 minutes, et via le bouton rond en haut a droite.
+Seuls les comptes connectes apparaissent (Accueil et page Flux).
+
+REGLAGES : onglet "Reglages" (barre de gauche). Tout y est configurable : prenom, ville, theme, vignettes et ordre,
+comptes, flux RSS, page Taches, favoris. Sauvegarde dans settings.json (sans identifiants de comptes).
+
+GESTIONNAIRE DES TACHES : Reglages > Taches > Style (liste, courbes, batons, cercles, mixte). Les courbes utilisent un historique de 1 h releve par le serveur.
+
+VIGNETTES : Reglages > Vignettes taches (type, taille, ordre de chaque vignette) et Reglages > Accueil (nom, largeur, couleur, ordre).
+
+LOGOS : le serveur recupere lui-meme l icone de chaque site (dossier favicons/, garde 7 jours). Reglages > Vignettes raccourcis : vignettes de liens a ajouter sur l Accueil.
+
+SI LES LOGOS NE S AFFICHENT PAS : le serveur n a probablement pas ete redemarre apres la mise a jour. Ferme les processus python dans le Gestionnaire des taches (Ctrl+Maj+Echap) puis relance lancer_silencieux.vbs.
+Ensuite, Reglages > Donnees > Redemarrer le serveur permet de le relancer sans passer par le Gestionnaire. Reglages > Favoris > Diagnostic des logos explique un echec.
